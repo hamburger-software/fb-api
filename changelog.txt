@@ -1,5 +1,127 @@
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
+FB 3.50 05/00
+---------------------------------------------------------------------------------------------------
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Bilanzkonten sind offiziell
+freigegeben:
+GET     /v1/balance-sheet-accounts -> Gibt alle Bilanzkonten zurück
+POST    /v1/balance-sheet-accounts -> Legt ein neues Bilanzkonto an
+GET     /v1/balance-sheet-accounts/{accountId} -> Gibt das Bilanzkonto mit der angegebenen accountId zurück
+PUT     /v1/balance-sheet-accounts/{accountId} -> Ändert das Bilanzkonto mit der angegebenen accountId
+DELETE  /v1/balance-sheet-accounts/{accountId} -> Löscht das Bilanzkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Bankkonten sind offiziell
+freigegeben:
+GET     /v1/bank-accounts -> Gibt alle Bankkonten zurück
+POST    /v1/bank-accounts -> Legt ein neues Bankkonto an
+GET     /v1/bank-accounts/{accountId} -> Gibt das Bankkonto mit der angegebenen accountId zurück
+PUT     /v1/bank-accounts/{accountId} -> Ändert das Bankkonto mit der angegebenen accountId
+DELETE  /v1/bank-accounts/{accountId} -> Löscht das Bankkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Kassenkonten sind offiziell
+freigegeben:
+GET     /v1/cash-accounts -> Gibt alle Kassenkonten zurück
+POST    /v1/cash-accounts -> Legt ein neues Kassenkonto an
+GET     /v1/cash-accounts/{accountId} -> Gibt das Kassenkonto mit der angegebenen accountId zurück
+PUT     /v1/cash-accounts/{accountId} -> Ändert das Kassenkonto mit der angegebenen accountId
+DELETE  /v1/cash-accounts/{accountId} -> Löscht das Kassenkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Abschlusskonten sind offiziell
+freigegeben:
+GET     /v1/closing-balance-accounts -> Gibt alle Abschlusskonten zurück
+POST    /v1/closing-balance-accounts -> Legt ein neues Abschlusskonto an
+GET     /v1/closing-balance-accounts/{accountId} -> Gibt das Abschlusskonto mit der angegebenen accountId zurück
+PUT     /v1/closing-balance-accounts/{accountId} -> Ändert das Abschlusskonto mit der angegebenen accountId
+DELETE  /v1/closing-balance-accounts/{accountId} -> Löscht das Abschlusskonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Rundungsdifferenzkonten sind offiziell
+freigegeben:
+GET     /v1/currency-difference-accounts -> Gibt alle Rundungsdifferenzkonten zurück
+POST    /v1/currency-difference-accounts -> Legt ein neues Rundungsdifferenzkonto an
+GET     /v1/currency-difference-accounts/{accountId} -> Gibt das Rundungsdifferenzkonto mit der angegebenen accountId zurück
+PUT     /v1/currency-difference-accounts/{accountId} -> Ändert das Rundungsdifferenzkonto mit der angegebenen accountId
+DELETE  /v1/currency-difference-accounts/{accountId} -> Löscht das Rundungsdifferenzkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Anlagenkonten sind offiziell
+freigegeben:
+GET     /v1/investment-accounts -> Gibt alle Anlagenkonten zurück
+POST    /v1/investment-accounts -> Legt ein neues Anlagenkonto an
+GET     /v1/investment-accounts/{accountId} -> Gibt das Anlagenkonto mit der angegebenen accountId zurück
+PUT     /v1/investment-accounts/{accountId} -> Ändert das Anlagenkonto mit der angegebenen accountId
+DELETE  /v1/investment-accounts/{accountId} -> Löscht das Anlagenkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Eröffnungskonten sind offiziell
+freigegeben:
+GET     /v1/opening-balance-accounts -> Gibt alle Eröffnungskonten zurück
+POST    /v1/opening-balance-accounts -> Legt ein neues Eröffnungskonto an
+GET     /v1/opening-balance-accounts/{accountId} -> Gibt das Eröffnungskonto mit der angegebenen accountId zurück
+PUT     /v1/opening-balance-accounts/{accountId} -> Ändert das Eröffnungskonto mit der angegebenen accountId
+DELETE  /v1/opening-balance-accounts/{accountId} -> Löscht das Eröffnungskonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von GuV-Konten sind offiziell
+freigegeben:
+GET     /v1/profit-loss-accounts -> Gibt alle GuV-Konten zurück
+POST    /v1/profit-loss-accounts -> Legt ein neues GuV-Konto an
+GET     /v1/profit-loss-accounts/{accountId} -> Gibt das GuV-Konto mit der angegebenen accountId zurück
+PUT     /v1/profit-loss-accounts/{accountId} -> Ändert das GuV-Konto mit der angegebenen accountId
+DELETE  /v1/profit-loss-accounts/{accountId} -> Löscht das GuV-Konto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Mengenkonten sind offiziell
+freigegeben:
+GET     /v1/quantity-accounts -> Gibt alle Mengenkonten zurück
+POST    /v1/quantity-accounts -> Legt ein neues Mengenkonto an
+GET     /v1/quantity-accounts/{accountId} -> Gibt das Mengenkonto mit der angegebenen accountId zurück
+PUT     /v1/quantity-accounts/{accountId} -> Ändert das Mengenkonto mit der angegebenen accountId
+DELETE  /v1/quantity-accounts/{accountId} -> Löscht das Mengenkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Steuerkonten sind offiziell
+freigegeben:
+GET     /v1/tax-accounts -> Gibt alle Steuerkonten zurück
+POST    /v1/tax-accounts -> Legt ein neues Steuerkonto an
+GET     /v1/tax-accounts/{accountId} -> Gibt das Steuerkonto mit der angegebenen accountId zurück
+PUT     /v1/tax-accounts/{accountId} -> Ändert das Steuerkonto mit der angegebenen accountId
+DELETE  /v1/tax-accounts/{accountId} -> Löscht das Steuerkonto mit der angegebenen accountId
+
+Die folgenden Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Sammelkonten sind offiziell
+freigegeben:
+GET     /v1/collective-accounts -> Gibt alle Sammelkonten zurück
+POST    /v1/collective-accounts -> Legt ein neues Sammelkonto an
+GET     /v1/collective-accounts/{accountId} -> Gibt das Sammelkonto mit der angegebenen accountId zurück
+PUT     /v1/collective-accounts/{accountId} -> Ändert das Sammelkonto mit der angegebenen accountId
+DELETE  /v1/collective-accounts/{accountId} -> Löscht das Sammelkonto mit der angegebenen accountId
+
+Es gibt neue Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Steuerkennzeichen:
+GET     /v1/tax-codes -> Gibt alle Steuerkennzeichen zurück
+POST    /v1/tax-codes -> Legt ein neues Steuerkennzeichen an
+GET     /v1/tax-codes/{taxCodeId} -> Gibt das Steuerkennzeichen mit der angegebenen taxCodeId zurück
+PUT     /v1/tax-codes/{taxCodeId} -> Ändert das Steuerkennzeichen mit der angegebenen taxCodeId
+DELETE  /v1/tax-codes/{taxCodeId} -> Löscht das Steuerkennzeichen mit der angegebenen taxCodeId
+
+Es gibt neue Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Steuerschlüsseln:
+GET     /v1/tax-codes/{taxCodeId}/tax-keys -> Gibt alle Steuerschlüssel zum Steuerkennzeichen mit der angegebenen taxCodeId zurück
+POST    /v1/tax-codes/{taxCodeId}/tax-keys -> Legt einen neuen Steuerschlüssel im Steuerkennzeichen mit der angegebenen taxCodeId an
+GET     /v1/tax-codes/{taxCodeId}/tax-keys/{taxKeyId} -> Gibt den Steuerschlüssel mit der angegebenen taxKeyId aus dem Steuerkennzeichen mit der angegebenen taxCodeId zurück
+PUT     /v1/tax-codes/{taxCodeId}/tax-keys/{taxKeyId} -> Ändert den Steuerschlüssel mit der angegebenen taxKeyId im Steuerkennzeichen mit der angegebenen taxCodeId
+DELETE  /v1/tax-codes/{taxCodeId}/tax-keys/{taxKeyId} -> Löscht den Steuerschlüssel mit der angegebenen taxKeyId aus dem Steuerkennzeichen mit der angegebenen taxCodeId
+GET     /v1/tax-keys -> Gibt eine Liste aller Steuerschlüssel zurück
+GET     /v1/tax-keys/date/{date} -> Gibt eine Liste aller Steuerschlüssel zurück, die am angegebenen Datum date gültig sind
+
+Es gibt neue Endpunkte zum Abrufen und Ändern von Anlagen:
+GET     /v1/assets -> Gibt alle Anlagen zurück
+GET     /v1/assets/{assetId} -> Gibt die Anlage mit der angegebenen assetId zurück
+PUT     /v1/assets/{assetId} -> Ändert die Anlage mit der angegebenen assetId
+
+Es gibt neue Endpunkte zum Abrufen und Ändern von Offenen Posten:
+GET     /v1/open-items -> Gibt alle Offenen Posten zurück
+GET     /v1/open-items/{openItemId} -> Gibt den Offenen Posten mit der angegebenen openItemId zurück
+PUT     /v1/open-items/{openItemId} -> Ändert den Offenen Posten mit der angegebenen openItemId
+
+Es gibt neue Endpunkte zum Abrufen und Ändern von Ratenvereinbarungen:
+GET     /v1/open-items/{openItemId}/instalments -> Gibt die Raten des Offenen Postens mit der angegebenen openItemId zurück
+PATCH   /v1/open-items/{openItemId}/patchInstalmentAgreement -> Ändert die Ratenvereinbarung des Offenen Postens mit der angegebenen openItemId
+PATCH   /v1/open-items/{openItemId}/deactivateInstalmentAgreement -> Deaktiviert die Ratenvereinbarung des Offenen Postens mit der angegebenen openItemId
+
+---------------------------------------------------------------------------------------------------
 FB 3.50 03/00
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
