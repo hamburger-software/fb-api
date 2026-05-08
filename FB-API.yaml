@@ -13,7 +13,7 @@ info:
     url: http://www.hamburger-software.de
   termsOfService: https://www.hamburger-software.de
   title: HS API (Finanzbuchhaltung)
-  version: 3.50.05.00
+  version: 3.50.06.00
 servers:
 - url: "https://{hostname}:{port}/fb-api"
   variables:
@@ -28,12 +28,24 @@ tags:
   name: AppInfo
 - description: "Benutzerverwaltung, Passwort ändern"
   name: Administration
-- description: Stammdaten Konten
-  name: Konten
-- description: "Weitere Stammdaten, wie Zahlungsbedingungen"
-  name: WeitereStammdaten
+- description: "Anlagen erstellen, abfragen, ändern, löschen"
+  name: Anlagen
+- description: Ablagesystem
+  name: Archive
+- description: Erzeugung eines Bearer Tokens zur OAuth2-Authentifizierung
+  name: Authentification
 - description: Belege importieren
   name: Belege
+- description: Konfiguration. z.B. Definition benutzerdefinierter Felder
+  name: Configuration
+- description: Endpunktgruppe für dateiähnliche Importe
+  name: Import
+- description: Stammdaten Konten
+  name: Konten
+- description: Abfrage der Offenen Posten
+  name: OffenePosten
+- description: "Weitere Stammdaten, wie Zahlungsbedingungen"
+  name: WeitereStammdaten
 paths:
   /v1/token:
     post:
