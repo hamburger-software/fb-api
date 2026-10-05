@@ -1,4 +1,49 @@
 ---------------------------------------------------------------------------------------------------
+FB 3.60 00/00
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Neue Endpunkte:
+---------------------------------------------------------------------------------------------------
+Bankverbindungen
+Es gibt neue Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Bankverbindungen bei Kundenkonten:
+GET    /v1/debtors/{accountId}/bank-details -> Gibt alle Bankverbindungen des Kundenkontos mit der angegebenen accountId zurück.
+POST   /v1/debtors/{accountId}/bank-details -> Legt eine neue Bankverbindung im Kundenkonto mit der angegebenen accountId an.
+GET    /v1/debtors/{accountId}/bank-details/{bankAccountId} -> Gibt die Bankverbindung mit der angegebenen bankAccountId aus dem Kundenkonto mit der angegebenen accountId zurück.
+PUT    /v1/debtors/{accountId}/bank-details/{bankAccountId} -> Ändert die Bankverbindung mit der angegebenen bankAccountId im Kundenkonto mit der angegebenen accountId.
+DELETE /v1/debtors/{accountId}/bank-details/{bankAccountId} -> Löscht die Bankverbindung mit der angegebenen bankAccountId aus dem Kundenkonto mit der angegebenen accountId.
+
+Es gibt neue Endpunkte zum Abrufen, Anlegen, Ändern und Löschen von Bankverbindungen bei Lieferantenkonten:
+GET    /v1/creditors/{accountId}/bank-details -> Gibt alle Bankverbindungen des Lieferantenkontos mit der angegebenen accountId zurück.
+POST   /v1/creditors/{accountId}/bank-details -> Legt eine neue Bankverbindung im Lieferantenkonto mit der angegebenen accountId an.
+GET    /v1/creditors/{accountId}/bank-details/{bankAccountId} -> Gibt die Bankverbindung mit der angegebenen bankAccountId aus dem Lieferantenkonto mit der angegebenen accountId zurück.
+PUT    /v1/creditors/{accountId}/bank-details/{bankAccountId} -> Ändert die Bankverbindung mit der angegebenen bankAccountId im Lieferantenkonto mit der angegebenen accountId.
+DELETE /v1/creditors/{accountId}/bank-details/{bankAccountId} -> Löscht die Bankverbindung mit der angegebenen bankAccountId aus dem Lieferantenkonto mit der angegebenen accountId.
+
+---------------------------------------------------------------------------------------------------
+Änderungen:
+---------------------------------------------------------------------------------------------------
+Kundenkonten (GET /v1/debtors, GET /v1/debtors/{accountId}, POST /v1/debtors, PUT /v1/debtors/{accountId})
+Die folgenden Felder wurden ergänzt:
+- BankAccountDescription: Bezeichnung der Bankverbindung
+- IsMainBankAccount: Hauptbankverbindung
+- UseForPaymentRun: Für Zahllauf verwenden
+- AllowedForDirectDebitRun: Für Lastschriftlauf verwendbar
+Im Feld "TypeOfDirectDebit" sind die folgenden Werte nicht mehr gültig:
+- DirectDebiting
+- DebitOrder
+
+Lieferantenkonten (GET /v1/creditors, GET /v1/creditors/{accountId}, POST /v1/creditors, PUT /v1/creditors/{accountId})
+Die folgenden Felder wurden ergänzt:
+- BankAccountDescription: Bezeichnung der Bankverbindung
+- IsMainBankAccount: Hauptbankverbindung
+- UseForPaymentRun: Für Zahllauf verwenden
+
+Bankkonten (GET /v1/bank-accounts, GET /v1/bank-accounts/{accountId}, POST /v1/bank-accounts, PUT /v1/bank-accounts/{accountId})
+Es gibt Änderungen beim Feld "SepaVersion":
+- Der Wert V3.9 ist neu hinzugekommen.
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 FB 3.50 06/00
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
